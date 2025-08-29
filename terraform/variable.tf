@@ -19,3 +19,21 @@ data "aws_region" "current" {}
 //  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonMWAAServiceRolePolicy"
 //}
 
+# Variables
+variable "key_name" {
+  description = "EC2 Key Pair name"
+  type        = string
+  default     = "dkim_security"
+}
+
+variable "subnet_id" {
+  description = "Subnet ID for EMR cluster"
+  type        = string
+  default     = "dkim_subnet"
+}
+
+variable "vpc_id" {
+  description = "VPC ID"
+  type        = string
+  default     = "dkim_vpc"
+}
